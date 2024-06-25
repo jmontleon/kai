@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1719324216770,
+  "lastUpdate": 1719324222876,
   "repoUrl": "https://github.com/jmontleon/kai",
   "entries": {
     "Benchmark": [
@@ -550,6 +550,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "ChatIBMGenAI_deepseek-ai_deepseek-coder-33b-instruct_example_a",
             "value": "1.0",
+            "unit": "Match"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jmontleo@redhat.com",
+            "name": "Jason Montleon",
+            "username": "jmontleon"
+          },
+          "committer": {
+            "email": "jmontleo@redhat.com",
+            "name": "Jason Montleon",
+            "username": "jmontleon"
+          },
+          "distinct": true,
+          "id": "194facd9111ee4b249e9eae94f822a07bb5cab02",
+          "message": "Add Evaluation GH Action\n\nSigned-off-by: Jason Montleon <jmontleo@redhat.com>",
+          "timestamp": "2024-06-25T10:00:02-04:00",
+          "tree_id": "620186ef8b57772dafb86b2b1bfa74233ec46c9f",
+          "url": "https://github.com/jmontleon/kai/commit/194facd9111ee4b249e9eae94f822a07bb5cab02"
+        },
+        "date": 1719324221806,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "ChatIBMGenAI_codellama_codellama-34b-instruct_example_a",
+            "value": "79.0",
             "unit": "Match"
           }
         ]
