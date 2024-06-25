@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1719323906959,
+  "lastUpdate": 1719323908412,
   "repoUrl": "https://github.com/jmontleon/kai",
   "entries": {
     "Benchmark": [
@@ -434,6 +434,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "ChatIBMGenAI_mistralai_mixtral-8x7b-instruct-v01_example_a",
             "value": "295.0",
+            "unit": "Match"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jmontleo@redhat.com",
+            "name": "Jason Montleon",
+            "username": "jmontleon"
+          },
+          "committer": {
+            "email": "jmontleo@redhat.com",
+            "name": "Jason Montleon",
+            "username": "jmontleon"
+          },
+          "distinct": true,
+          "id": "7011993282121ed5122dcf6a39152bbd89f0d9e2",
+          "message": "Add Evaluation GH Action\n\nSigned-off-by: Jason Montleon <jmontleo@redhat.com>",
+          "timestamp": "2024-06-25T09:54:52-04:00",
+          "tree_id": "ee1dfb26a01a4065d4e28c6d914aa4afb8414b12",
+          "url": "https://github.com/jmontleon/kai/commit/7011993282121ed5122dcf6a39152bbd89f0d9e2"
+        },
+        "date": 1719323907881,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "ChatIBMGenAI_codellama_codellama-34b-instruct_example_a",
+            "value": "1.0",
             "unit": "Match"
           }
         ]
