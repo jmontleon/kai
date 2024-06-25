@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1719323002895,
+  "lastUpdate": 1719323003864,
   "repoUrl": "https://github.com/jmontleon/kai",
   "entries": {
     "Benchmark": [
@@ -139,6 +139,35 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/jmontleon/kai/commit/b753739abfb90a30d6e36ac10ac544be9aa2c66a"
         },
         "date": 1719323002329,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "___example_a",
+            "value": "",
+            "unit": "Match"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jmontleo@redhat.com",
+            "name": "Jason Montleon",
+            "username": "jmontleon"
+          },
+          "committer": {
+            "email": "jmontleo@redhat.com",
+            "name": "Jason Montleon",
+            "username": "jmontleon"
+          },
+          "distinct": true,
+          "id": "b753739abfb90a30d6e36ac10ac544be9aa2c66a",
+          "message": "Add Evaluation GH Action\n\nSigned-off-by: Jason Montleon <jmontleo@redhat.com>",
+          "timestamp": "2024-06-25T09:40:08-04:00",
+          "tree_id": "5a81082bfa7755d1538874d44ef45e76d4878d2f",
+          "url": "https://github.com/jmontleon/kai/commit/b753739abfb90a30d6e36ac10ac544be9aa2c66a"
+        },
+        "date": 1719323003348,
         "tool": "customBiggerIsBetter",
         "benches": [
           {
