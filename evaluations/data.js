@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1722866298026,
+  "lastUpdate": 1722866299376,
   "repoUrl": "https://github.com/jmontleon/kai",
   "entries": {
     "Benchmark": [
@@ -782,6 +782,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "ChatIBMGenAI_deepseek-ai_deepseek-coder-33b-instruct_example_a",
             "value": "1.0",
+            "unit": "Match"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jmontleo@redhat.com",
+            "name": "Jason Montleon",
+            "username": "jmontleon"
+          },
+          "committer": {
+            "email": "jmontleo@redhat.com",
+            "name": "Jason Montleon",
+            "username": "jmontleon"
+          },
+          "distinct": true,
+          "id": "e5ab63c30c2495d3b68a8e57abfec697cc73a2e7",
+          "message": ":bug: Fix cachecontrol errors in FHA container builds\n\nSigned-off-by: Jason Montleon <jmontleo@redhat.com>",
+          "timestamp": "2024-08-05T09:57:04-04:00",
+          "tree_id": "79e22a1f89906f3dd60d9f64d22983a72abf81f9",
+          "url": "https://github.com/jmontleon/kai/commit/e5ab63c30c2495d3b68a8e57abfec697cc73a2e7"
+        },
+        "date": 1722866298824,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "ChatIBMGenAI_mistralai_mixtral-8x7b-instruct-v01_example_a",
+            "value": "295.0",
             "unit": "Match"
           }
         ]
