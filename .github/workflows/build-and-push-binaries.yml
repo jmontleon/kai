@@ -1,0 +1,91 @@
+name: Build and Publish Binaries
+
+on:
+  workflow_dispatch:
+    inputs:
+      use_latest_release:
+        type: boolean
+        default: true
+        description: Upload binaries to the most recent release
+      tag_pattern:
+        type: string
+        default: 'v*'
+        description: Pick from tags matching this pattern
+      pre_release:
+        type: boolean
+        description: Look for pre-release?
+        default: false
+  pull_request:
+jobs:
+  e2e_test:
+    name: Run e2e test
+    strategy:
+      matrix:
+        runs_on:
+          - os: ubuntu-latest
+            shell: bash
+          - os: macos-latest
+            shell: bash
+          - os: windows-latest
+            shell: cmd
+    runs-on: ${{ matrix.runs_on.os }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - id: release_info
+        uses: joutvhu/get-release@v1
+        with:
+          latest: ${{ github.event.inputs.use_latest_release }}
+          tag_pattern: ${{ github.event.inputs.tag_pattern }}
+          prerelease: ${{ github.event.inputs.pre_release }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Set up venv (windows)
+        if: matrix.runs_on.os == 'windows-latest'
+        run: |
+          python -m venv venv
+          . venv\Scripts\activate
+          echo PATH=$PATH >> $GITHUB_ENV
+
+      - name: Set up venv (linux & mac)
+        if: matrix.runs_on.os != 'windows-latest'
+        run: |
+          python -m venv venv
+          . venv/bin/activate
+          echo PATH=$PATH >> $GITHUB_ENV
+
+      - name: Build RPC server
+        run: |
+          pip install -r requirements.txt
+          pip install pyinstaller
+          pip install -e .
+          pyinstaller build/build.spec
+
+      - name: Archive RPC server (linux & mac)
+        if: matrix.runs_on.os != 'windows-latest'
+        run: |
+          cd dist
+          zip -r kai-rpc-server.${{ matrix.os }}.${{ matrix.arch }}.zip kai-rpc-server
+
+      - name: Set up venv (windows)
+        if: matrix.runs_on.os == 'windows-latest'
+        run: |
+          cd dist
+          Compress-Archive -Path kai-rpc-server.exe -Destination kai-rpc-server.${{ matrix.os }}.${{ matrix.arch }}.zip
+
+      - name: Upload linux binary
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.release_info.outputs.upload_url }}
+          asset_path: ./dist/kai-rpc-server.${{ matrix.os }}.${{ matrix.arch }}.zip
+          asset_name: kai-rpc-server.${{ matrix.os }}.${{ matrix.arch }}.zip
+          asset_content_type: application/zip
