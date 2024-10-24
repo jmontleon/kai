@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1729793739961,
+  "lastUpdate": 1729793750189,
   "repoUrl": "https://github.com/jmontleon/kai",
   "entries": {
     "Benchmark": [
@@ -2724,6 +2724,35 @@ window.BENCHMARK_DATA = {
         "benches": [
           {
             "name": "ChatIBMGenAI_mistralai_mixtral-8x7b-instruct-v01_example_a",
+            "value": "",
+            "unit": "Match"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jmontleo@redhat.com",
+            "name": "Jason Montleon",
+            "username": "jmontleon"
+          },
+          "committer": {
+            "email": "jmontleo@redhat.com",
+            "name": "Jason Montleon",
+            "username": "jmontleon"
+          },
+          "distinct": true,
+          "id": "44e9b0771fc311554b7ef343e50cfe26eaf1b2f7",
+          "message": "Add binary build workflow\n\nSigned-off-by: Jason Montleon <jmontleo@redhat.com>",
+          "timestamp": "2024-10-24T14:13:01-04:00",
+          "tree_id": "30a9e0b454a66f6cf5a1b23c5859068a834e5983",
+          "url": "https://github.com/jmontleon/kai/commit/44e9b0771fc311554b7ef343e50cfe26eaf1b2f7"
+        },
+        "date": 1729793749541,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "ChatIBMGenAI_deepseek-ai_deepseek-coder-33b-instruct_example_a",
             "value": "",
             "unit": "Match"
           }
