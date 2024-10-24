@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1729799542881,
+  "lastUpdate": 1729800329909,
   "repoUrl": "https://github.com/jmontleon/kai",
   "entries": {
     "Benchmark": [
@@ -2952,6 +2952,35 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/jmontleon/kai/commit/46fac59bd6fcc27a07731452626711a41c554ed2"
         },
         "date": 1729799542328,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "ChatIBMGenAI_meta-llama_llama-3-70b-instruct_example_a",
+            "value": "",
+            "unit": "Match"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jmontleo@redhat.com",
+            "name": "Jason Montleon",
+            "username": "jmontleon"
+          },
+          "committer": {
+            "email": "jmontleo@redhat.com",
+            "name": "Jason Montleon",
+            "username": "jmontleon"
+          },
+          "distinct": true,
+          "id": "3a3d8546f398acdff948a952a9cc8fcd9cf0e3e8",
+          "message": "Add binary build workflow\n\nSigned-off-by: Jason Montleon <jmontleo@redhat.com>",
+          "timestamp": "2024-10-24T16:02:57-04:00",
+          "tree_id": "29550cf918a4a65cdecacdbc031729358c42e314",
+          "url": "https://github.com/jmontleon/kai/commit/3a3d8546f398acdff948a952a9cc8fcd9cf0e3e8"
+        },
+        "date": 1729800329563,
         "tool": "customBiggerIsBetter",
         "benches": [
           {
