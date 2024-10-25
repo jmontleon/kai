@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1729869021427,
+  "lastUpdate": 1729869970246,
   "repoUrl": "https://github.com/jmontleon/kai",
   "entries": {
     "Benchmark": [
@@ -3971,6 +3971,35 @@ window.BENCHMARK_DATA = {
         "benches": [
           {
             "name": "ChatIBMGenAI_meta-llama_llama-3-70b-instruct_example_a",
+            "value": "",
+            "unit": "Match"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jmontleo@redhat.com",
+            "name": "Jason Montleon",
+            "username": "jmontleon"
+          },
+          "committer": {
+            "email": "jmontleo@redhat.com",
+            "name": "Jason Montleon",
+            "username": "jmontleon"
+          },
+          "distinct": true,
+          "id": "08f4b2ce41247b091fec6c1085cdc8855067573b",
+          "message": ":sparkles: Add Binary Build and Publish Workflow\n\nSigned-off-by: Jason Montleon <jmontleo@redhat.com>",
+          "timestamp": "2024-10-25T11:23:26-04:00",
+          "tree_id": "e3c28b805c2c18a43f88e5547b8cca6fad45af9b",
+          "url": "https://github.com/jmontleon/kai/commit/08f4b2ce41247b091fec6c1085cdc8855067573b"
+        },
+        "date": 1729869969875,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "ChatIBMGenAI_codellama_codellama-34b-instruct_example_a",
             "value": "",
             "unit": "Match"
           }
