@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1729865221946,
+  "lastUpdate": 1729865225345,
   "repoUrl": "https://github.com/jmontleon/kai",
   "entries": {
     "Benchmark": [
@@ -3594,6 +3594,35 @@ window.BENCHMARK_DATA = {
         "benches": [
           {
             "name": "ChatIBMGenAI_deepseek-ai_deepseek-coder-33b-instruct_example_a",
+            "value": "",
+            "unit": "Match"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jmontleo@redhat.com",
+            "name": "Jason Montleon",
+            "username": "jmontleon"
+          },
+          "committer": {
+            "email": "jmontleo@redhat.com",
+            "name": "Jason Montleon",
+            "username": "jmontleon"
+          },
+          "distinct": true,
+          "id": "831e8663984ee8c1d0b70fd60b6807922e820965",
+          "message": ":sparkles: Add Binary Build and Publish Workflow\n\nSigned-off-by: Jason Montleon <jmontleo@redhat.com>",
+          "timestamp": "2024-10-25T10:04:23-04:00",
+          "tree_id": "bb856c9f3721560ce9572ce58b8c9582239c3db4",
+          "url": "https://github.com/jmontleon/kai/commit/831e8663984ee8c1d0b70fd60b6807922e820965"
+        },
+        "date": 1729865224950,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "ChatIBMGenAI_mistralai_mistral-7b-v0-1_example_a",
             "value": "",
             "unit": "Match"
           }
