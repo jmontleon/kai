@@ -80,6 +80,7 @@ jobs:
 
       - name: Build RPC server
         run: |
+          python --version
           pip install pyinstaller
           pip install -e .
           pip install -r requirements.txt
