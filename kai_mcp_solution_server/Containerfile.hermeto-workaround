@@ -1,0 +1,2 @@
+FROM quay.io/konflux-ci/hermeto:latest
+COPY hermeto-pip-main.py /venv/lib/python3.9/site-packages/hermeto/core/package_managers/pip/main.py

@@ -1,0 +1,13 @@
+FROM registry.access.redhat.com/ubi9/ubi
+
+WORKDIR /app
+RUN mkdir -p /data/
+ENV DB_PATH=/data/kai_solutions.db
+
+RUN dnf --refresh -y update \
+ && dnf -y install autoconf automake cargo cmake gcc gcc-c++ git libffi-devel libpq-devel ninja-build python3.12-cryptography python3.12-devel python3.12-pip python3.12-numpy \
+ && dnf -y clean all
+
+ENV MATURIN_NO_INSTALL_RUST=true
+ENV PIP_FIND_LINKS=/app/hermeto-output/deps/pip/
+ENV PIP_NO_INDEX=true
